@@ -1,0 +1,28 @@
+{
+  "name": "html-Digital-Envelope-website",
+  "version": "1",
+  "moduleType": [
+    "amd"
+  ],
+  "authors": [
+    "Marcin Sydor"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fullpage": "2.6.5",
+    "wow": "~1.1.2",
+    "animate.css": "~3.2.6",
+    "foundation": "~5.5.2",
+    "jquery": "2.1.4",
+    "fastclick": "1.0.6",
+    "jquery-placeholder": "2.0.9",
+    "modernizr": "2.8.3"
+  }
+}
