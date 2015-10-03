@@ -1,13 +1,8 @@
 .DS_Store
 gulp.2
 *.log
-tmp
-src
 .sass-cache
 node_modules
-img
-css
-js
 imagesbak
 bower_components
 build
