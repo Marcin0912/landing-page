@@ -31,7 +31,7 @@ gulp.task('clean-styles', function(done) {
 
 gulp.task('sass', function() {
     log('Compiling Sass -> CSS');
-    return $.sass(config.scss, {sourcemap: true, compass: true})
+    return $.sass(config.scss, {sourcemap: true})
         .on('error', function(err) {
             console.log('Error', err.message);
         })
