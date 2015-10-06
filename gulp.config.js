@@ -1,12 +1,21 @@
-module.exports = function() {
+module.exports = function () {
+    var src = './src/';
+    var temp = './.tmp/';
     var config = {
-        temp: './tmp/',
-        src: './src',
-        index: './src/index.html',
-        partials: './src/partials/*.*',
-        scss: './src/style.scss',
-        css: './tmp/css/',
-        js: './src/js/**/*.js',
+        temp: temp,
+        // all js to vet
+        alljs: [
+            './src/**/*.js',
+            './*.js'
+        ],
+        src: src,
+        sass: src + 'style.scss',
+        partials: src + '**/*.scss',
+
+        index: src + 'index.html',
+
+        css: temp + '*.css/',
+        js: src + 'js/**/*.js',
         bower: {
             json: require('./bower.json'),
             directory: './bower_components/',
@@ -14,20 +23,20 @@ module.exports = function() {
         },
 
         /**
-        * Browser-sync
-        */
-        server : {
+         * Browser-sync
+         */
+        server: {
             notify: false,
             baseDir: ['./', './src']
         }
     };
-    config.getWiredepDefaultOptions = function() {
+    config.getWiredepDefaultOptions = function () {
         var options = {
             bowerJson: config.bower.json,
             directory: config.bower.directory,
             ignorePath: config.bower.ignorePath
-            };
-            return options;
         };
+        return options;
+    };
     return config;
 };
